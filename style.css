@@ -1,1 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    font-size: large;
+    background-color: #ded7d7;
+    color: #575656;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #7a5f76;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #4c9dc9;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+section.visible {
+    opacity: 1;
+}
+
+#home {
+    background-image: url('background-image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#about {
+    background-color: #f8f193;
+    color: #ea531c;
+}
+
+#education {
+    background-color: rgb(169, 249, 249);
+    color: #073702;
+}
+
+#skills {
+    background-color: rgb(176, 247, 106);
+    color: rgb(79, 8, 146);
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+.icon:nth-child(1) i { color: #00599C; }
+.icon:nth-child(2) i { color: #E34C26; }
+.icon:nth-child(3) i { color: #264DE4; }
+.icon:nth-child(4) i { color: hsl(61, 85%, 42%); }
+.icon:nth-child(5) i { color: #4479A1; }
+
+#projects {
+    background-color: #faacde;
+    color: #02486d;
+}
+
+#projects .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background-color: rgb(243, 247, 168);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+#contact {
+    background-color: rgb(222, 252, 102);
+    color: #353ca0bf;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.social-icons a {
+    color: #333;
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0073b1; 
+}
+
+.fab, .fas {
+    font-size: 2rem;
+}
+
+footer {
+    background-color: #5a7855;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
