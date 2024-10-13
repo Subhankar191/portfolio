@@ -49,3 +49,12 @@ document.querySelectorAll('nav a').forEach(anchor => {
         document.getElementById(targetId).scrollIntoView({ behavior: 'smooth'});
     });
 });
+
+//For toggle functionality
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.querySelector('nav ul');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+

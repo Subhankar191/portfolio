@@ -37,6 +37,39 @@ nav ul li a:hover {
     color: #4c9dc9;
 }
 
+/* For mobile view */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        margin-right: 20px;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
 section {
     padding: 20px;
     text-align: center;
